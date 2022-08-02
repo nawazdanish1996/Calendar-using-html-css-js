@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #bdc3c7;
+    width: 100%;
+    height: 100vh;    
+}
+
+body #title{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    color: #111111;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calendar{
+    width: 40rem;
+    height: 38rem;
+    background: #fff;
+    box-shadow: 0px 0px 10px #111111;
+    /* padding: 1rem; */
+}
+
+.month{
+    width: 100%;
+    height: 6rem;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0 2rem;
+    text-align: center;
+}
+
+.month .fa-solid{
+    font-size: 2rem;
+    color: #111111;
+    cursor: pointer;
+    padding: 1rem;
+    transition: all .5s ease;
+}
+
+.month .fa-solid:hover{
+    background: red;
+    color: #fff;
+}
+
+.month h1{
+    font-size: 1.5rem;
+    color: #111111;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-bottom: .5rem;
+}
+
+.weekdays{
+    width: 100%;
+    height: 5rem;
+    padding: 0 .4rem;
+    display: flex;
+    text-align: center;
+    background: #2980b9;
+}
+
+.weekdays div{
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    width: calc(44.2rem/7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: all .5s ease;
+}
+
+.weekdays div:hover{
+    background: gray;
+}
+
+.days{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: .2rem;
+}
+
+.days div{
+    text-align: center;
+    font-size: 1.4rem;
+    margin: .3rem;
+    width: calc(35rem/7);
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 2s;
+}
+
+.days div:hover:not(.today){
+    background: #2980b9;
+    border: .2rem solid #777;
+    cursor: pointer;
+}
+
+.prev-date,
+.next-date{
+    opacity: 0.5;
+}
+
+.today{
+    background: #2980b9;
+    color: white;
+}
